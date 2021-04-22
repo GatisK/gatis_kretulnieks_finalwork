@@ -1,4 +1,4 @@
-package lv.lu.finalwork.model;
+package lv.lu.gatis.kretulnieks.finalwork.model;
 
 import java.math.BigDecimal;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public class Product {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Product product = (Product) o;
-        return id.equals(product.id)
+        return Objects.equals(id, product.id)
                 && name.equals(product.name)
                 && price.equals(product.price)
                 && category == product.category
