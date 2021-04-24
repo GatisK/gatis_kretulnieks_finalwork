@@ -32,5 +32,5 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'lv.lu.gatis.kretulnieks.finalwork.App'
+    mainClass = 'lv.lu.gatis.kretulnieks.finalwork.ProductAccountingApplication'
 }

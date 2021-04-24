@@ -2,18 +2,24 @@ package lv.lu.gatis.kretulnieks.finalwork.ui;
 
 import lv.lu.gatis.kretulnieks.finalwork.model.ProductInputData;
 import lv.lu.gatis.kretulnieks.finalwork.service.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
 import java.util.Scanner;
 
+@Controller
 public class ConsoleUi {
 
-    private ProductService productService;
-    private Scanner scanner;
 
+    private final ProductService productService;
+    private final Scanner scanner;
+
+    @Autowired
     public ConsoleUi(ProductService productService, Scanner scanner) {
         this.productService = productService;
         this.scanner = scanner;
     }
+
 
     public void run() {
         int userChoice;

@@ -18,7 +18,7 @@ public class ProductRepositoryTest {
     @Before
     public void setUp() throws Exception {
         repoMock = new HashMap<>();
-        victim = new ProductRepository(repoMock);
+        victim = new ProductRepository();
     }
 
     @Test

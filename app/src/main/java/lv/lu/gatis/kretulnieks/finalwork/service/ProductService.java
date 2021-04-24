@@ -5,18 +5,24 @@ import lv.lu.gatis.kretulnieks.finalwork.model.ProductCategory;
 import lv.lu.gatis.kretulnieks.finalwork.model.ProductData;
 import lv.lu.gatis.kretulnieks.finalwork.model.ProductInputData;
 import lv.lu.gatis.kretulnieks.finalwork.repository.ProductRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class ProductService {
 
     private final ProductRepository repository;
 
+    @Autowired
     public ProductService(ProductRepository repository) {
         this.repository = repository;
     }
+
+
 
     public void save(ProductInputData productInputData) {
         Product product = convertFrom(productInputData);
