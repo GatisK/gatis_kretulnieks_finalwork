@@ -3,7 +3,7 @@ package lv.lu.gatis.kretulnieks.finalwork.service;
 import lv.lu.gatis.kretulnieks.finalwork.model.Product;
 import lv.lu.gatis.kretulnieks.finalwork.model.ProductCategory;
 import lv.lu.gatis.kretulnieks.finalwork.model.ProductInputData;
-import lv.lu.gatis.kretulnieks.finalwork.repository.ProductRepository;
+import lv.lu.gatis.kretulnieks.finalwork.repository.Repository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -21,7 +21,7 @@ public class ProductServiceTest {
     private ProductService victim;
 
 @Mock
-private ProductRepository repositoryMock;
+private Repository<Product> repositoryMock;
 
     @Test
     public void shouldConvertAndStoreTheProductData() {
